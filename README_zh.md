@@ -8,6 +8,7 @@
 [![GitHub pull request](https://img.shields.io/badge/PRs-welcome-blue)](https://github.com/hiyouga/LLaMA-Factory/pulls)
 [![Discord](https://dcbadge.vercel.app/api/server/c2EPEt5NU?compact=true&style=flat)](https://discord.gg/c2EPEt5NU)
 [![Spaces](https://img.shields.io/badge/🤗-Open%20In%20Spaces-blue)](https://huggingface.co/spaces/hiyouga/LLaMA-Board)
+[![Studios](https://img.shields.io/badge/ModelScope-Open%20In%20Studios-blue)](https://modelscope.cn/studios/hiyouga/LLaMA-Board)
 
 👋 加入我们的[微信群](assets/wechat.jpg)。
 
@@ -15,7 +16,7 @@
 
 ## LLaMA Board: 通过一站式网页界面快速上手 LLaMA Factory
 
-通过 **[🤗 Spaces](https://huggingface.co/spaces/hiyouga/LLaMA-Board)** 预览 LLaMA Board。
+通过 **[🤗 Spaces](https://huggingface.co/spaces/hiyouga/LLaMA-Board)** 或 **[ModelScope](https://modelscope.cn/studios/hiyouga/LLaMA-Board)** 预览 LLaMA Board。
 
 使用 `CUDA_VISIBLE_DEVICES=0 python src/train_web.py` 启动 LLaMA Board。（该模式目前仅支持单卡训练）
 
@@ -324,7 +325,7 @@ CUDA_VISIBLE_DEVICES=0 python src/train_bash.py \
 ```
 
 > [!WARNING]
-> 如果在 fp16 精度下训练 LLaMA-2 模型，请使用 `--per_device_eval_batch_size=1`。
+> 如果使用 fp16 精度进行 LLaMA-2 模型的 PPO 训练，请使用 `--per_device_train_batch_size=1`。
 
 #### DPO 训练
 
@@ -499,7 +500,7 @@ CUDA_VISIBLE_DEVICES=0 python src/train_bash.py \
 ```
 
 > [!WARNING]
-> 如果在 fp16 精度下推理 LLaMA-2 模型，请使用 `--per_device_eval_batch_size=1`。
+> 如果使用 fp16 精度进行 LLaMA-2 模型的预测，请使用 `--per_device_eval_batch_size=1`。
 
 > [!TIP]
 > 我们建议在量化模型的预测中使用 `--per_device_eval_batch_size=1` 和 `--max_target_length 128`。

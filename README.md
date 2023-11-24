@@ -8,6 +8,7 @@
 [![GitHub pull request](https://img.shields.io/badge/PRs-welcome-blue)](https://github.com/hiyouga/LLaMA-Factory/pulls)
 [![Discord](https://dcbadge.vercel.app/api/server/c2EPEt5NU?compact=true&style=flat)](https://discord.gg/c2EPEt5NU)
 [![Spaces](https://img.shields.io/badge/🤗-Open%20In%20Spaces-blue)](https://huggingface.co/spaces/hiyouga/LLaMA-Board)
+[![Studios](https://img.shields.io/badge/ModelScope-Open%20In%20Studios-blue)](https://modelscope.cn/studios/hiyouga/LLaMA-Board)
 
 👋 Join our [WeChat](assets/wechat.jpg).
 
@@ -15,7 +16,7 @@
 
 ## LLaMA Board: A One-stop Web UI for Getting Started with LLaMA Factory
 
-Preview LLaMA Board at **[🤗 Spaces](https://huggingface.co/spaces/hiyouga/LLaMA-Board)**.
+Preview LLaMA Board at **[🤗 Spaces](https://huggingface.co/spaces/hiyouga/LLaMA-Board)** or **[ModelScope](https://modelscope.cn/studios/hiyouga/LLaMA-Board)**.
 
 Launch LLaMA Board via `CUDA_VISIBLE_DEVICES=0 python src/train_web.py`. (multiple GPUs are not supported yet in this mode)
 
@@ -324,7 +325,7 @@ CUDA_VISIBLE_DEVICES=0 python src/train_bash.py \
 ```
 
 > [!WARNING]
-> Use `--per_device_train_batch_size=1` for LLaMA-2 models in fp16 training.
+> Use `--per_device_train_batch_size=1` for LLaMA-2 models in fp16 PPO training.
 
 #### DPO Training
 
